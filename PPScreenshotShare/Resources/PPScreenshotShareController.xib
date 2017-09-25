@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="fontawesome-webfont.ttf">
+            <string>FontAwesome</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPScreenshotShareController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="modalTransitionStyle">
+                    <integer key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="modalPresentationStyle">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="act" destination="YmK-Av-Vs1" id="yhY-gA-iaU"/>
+                <outlet property="background" destination="MhX-FW-vah" id="QLC-Ru-8qD"/>
+                <outlet property="buttonAction" destination="4f6-U6-Mit" id="c46-5l-dc3"/>
+                <outlet property="buttonClose" destination="tyx-qw-RPP" id="blc-4E-sWF"/>
+                <outlet property="gesture" destination="p1U-BS-1PP" id="uSI-ik-1Qs"/>
+                <outlet property="messageLabel" destination="dBC-Y0-r4G" id="aXd-zx-BwN"/>
+                <outlet property="screenshot" destination="rSh-hl-L6Q" id="Ihc-fZ-aPO"/>
+                <outlet property="shadow" destination="sT1-vZ-ES2" id="KEv-ux-61M"/>
+                <outlet property="swipe" destination="uqm-AR-moT" id="zyj-w7-OBS"/>
+                <outlet property="titleLabel" destination="eDH-I3-E6a" id="D92-U4-NfT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="buttons" destination="tyx-qw-RPP" id="tBp-cg-H1P"/>
+                <outletCollection property="buttons" destination="4f6-U6-Mit" id="0yz-2f-NQ4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sT1-vZ-ES2" userLabel="shadow">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhX-FW-vah" userLabel="background">
+                    <rect key="frame" x="20" y="50" width="280" height="380"/>
+                    <subviews>
+                        <button opaque="NO" tag="900" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyx-qw-RPP" userLabel="close">
+                            <rect key="frame" x="222" y="2" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Lmq-Os-NSS"/>
+                                <constraint firstAttribute="width" constant="50" id="oJx-DE-b7I"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="17"/>
+                            <state key="normal" title="">
+                                <color key="titleColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="exclusiveTouch" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tap:" destination="-1" eventType="touchUpInside" id="lFd-N6-4OV"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDH-I3-E6a" userLabel="title">
+                            <rect key="frame" x="20" y="30" width="240" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.42655369639396667" green="0.47584608197212219" blue="0.48026475310325623" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="rSh-hl-L6Q" userLabel="screenshot">
+                            <rect key="frame" x="20" y="61" width="240" height="145"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-Y0-r4G" userLabel="message">
+                            <rect key="frame" x="20" y="216" width="240" height="90"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.42655369639396667" green="0.47584608197212219" blue="0.48026475310325623" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f6-U6-Mit" userLabel="action">
+                            <rect key="frame" x="20" y="316" width="240" height="44"/>
+                            <color key="backgroundColor" red="0.76089900732040405" green="0.25649610161781311" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="JHs-by-C46"/>
+                            </constraints>
+                            <state key="normal" title="LOREM IPSUM">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="exclusiveTouch" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tap:" destination="-1" eventType="touchUpInside" id="UDB-pG-Nj1"/>
+                            </connections>
+                        </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="YmK-Av-Vs1" userLabel="act">
+                            <rect key="frame" x="228" y="328" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="4f6-U6-Mit" firstAttribute="leading" secondItem="MhX-FW-vah" secondAttribute="leading" constant="20" id="0cP-EN-fLT"/>
+                        <constraint firstItem="tyx-qw-RPP" firstAttribute="trailing" secondItem="MhX-FW-vah" secondAttribute="trailing" constant="-8" id="8y8-Hl-qbg"/>
+                        <constraint firstItem="dBC-Y0-r4G" firstAttribute="top" secondItem="rSh-hl-L6Q" secondAttribute="bottom" constant="10" id="A7G-WF-dut"/>
+                        <constraint firstItem="eDH-I3-E6a" firstAttribute="top" secondItem="MhX-FW-vah" secondAttribute="top" constant="30" id="K5J-o3-dBc"/>
+                        <constraint firstItem="4f6-U6-Mit" firstAttribute="bottom" secondItem="MhX-FW-vah" secondAttribute="bottom" constant="-20" id="MgU-2p-H0O"/>
+                        <constraint firstItem="dBC-Y0-r4G" firstAttribute="trailing" secondItem="MhX-FW-vah" secondAttribute="trailing" constant="-20" id="NsX-QU-Jsl"/>
+                        <constraint firstItem="eDH-I3-E6a" firstAttribute="leading" secondItem="MhX-FW-vah" secondAttribute="leading" constant="20" id="ObP-Ku-O1B"/>
+                        <constraint firstItem="dBC-Y0-r4G" firstAttribute="leading" secondItem="MhX-FW-vah" secondAttribute="leading" constant="20" id="RyP-FW-F1T"/>
+                        <constraint firstItem="eDH-I3-E6a" firstAttribute="trailing" secondItem="MhX-FW-vah" secondAttribute="trailing" constant="-20" id="SmO-Z0-S5J"/>
+                        <constraint firstItem="rSh-hl-L6Q" firstAttribute="trailing" secondItem="MhX-FW-vah" secondAttribute="trailing" constant="-20" id="aCt-gf-7R3"/>
+                        <constraint firstItem="tyx-qw-RPP" firstAttribute="top" secondItem="MhX-FW-vah" secondAttribute="top" constant="2" id="aHl-fK-Sg2"/>
+                        <constraint firstItem="YmK-Av-Vs1" firstAttribute="centerY" secondItem="4f6-U6-Mit" secondAttribute="centerY" id="cfu-S2-FFu"/>
+                        <constraint firstItem="YmK-Av-Vs1" firstAttribute="trailing" secondItem="4f6-U6-Mit" secondAttribute="trailing" constant="-12" id="eWS-WI-aQM"/>
+                        <constraint firstItem="rSh-hl-L6Q" firstAttribute="top" secondItem="eDH-I3-E6a" secondAttribute="bottom" constant="10" id="t10-eS-McC"/>
+                        <constraint firstItem="4f6-U6-Mit" firstAttribute="top" secondItem="dBC-Y0-r4G" secondAttribute="bottom" constant="10" id="vRK-5J-25L"/>
+                        <constraint firstItem="rSh-hl-L6Q" firstAttribute="leading" secondItem="MhX-FW-vah" secondAttribute="leading" constant="20" id="xRE-0s-2sx"/>
+                        <constraint firstItem="4f6-U6-Mit" firstAttribute="trailing" secondItem="MhX-FW-vah" secondAttribute="trailing" constant="-20" id="xjZ-e1-32m"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="sT1-vZ-ES2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9M1-Z4-jjw"/>
+                <constraint firstItem="MhX-FW-vah" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" constant="-50" id="N9F-EK-Ldu"/>
+                <constraint firstItem="MhX-FW-vah" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" constant="-20" id="Q37-sE-oSc"/>
+                <constraint firstItem="MhX-FW-vah" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="mVf-Ib-1gy"/>
+                <constraint firstItem="sT1-vZ-ES2" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="nGp-u9-GLa"/>
+                <constraint firstItem="sT1-vZ-ES2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oDA-WV-rqr"/>
+                <constraint firstItem="MhX-FW-vah" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="sgI-sW-zfm"/>
+                <constraint firstItem="sT1-vZ-ES2" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="upM-Ih-3wA"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="p1U-BS-1PP" appends="YES" id="d6Z-Fh-c7G"/>
+                <outletCollection property="gestureRecognizers" destination="uqm-AR-moT" appends="YES" id="jFl-FA-AGI"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="53"/>
+        </view>
+        <tapGestureRecognizer id="p1U-BS-1PP" userLabel="gesture">
+            <connections>
+                <action selector="gesture:" destination="-1" id="t7u-E8-TBe"/>
+                <outlet property="delegate" destination="-1" id="GL8-v1-0AR"/>
+            </connections>
+        </tapGestureRecognizer>
+        <swipeGestureRecognizer direction="down" id="uqm-AR-moT" userLabel="swipe">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="direction">
+                    <integer key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <action selector="gesture:" destination="-1" id="01O-s3-pF4"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

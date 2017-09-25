@@ -1,0 +1,16 @@
+PODS:
+  - PPScreenshotShare (0.1.0)
+
+DEPENDENCIES:
+  - PPScreenshotShare (from `../`)
+
+EXTERNAL SOURCES:
+  PPScreenshotShare:
+    :path: ../
+
+SPEC CHECKSUMS:
+  PPScreenshotShare: 928d9bb23f758291ddbde42fe9e815ef255e7563
+
+PODFILE CHECKSUM: e04cb62dc1f9a03f0eecd7b1acccc75cd79cd778
+
+COCOAPODS: 1.2.1
